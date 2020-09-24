@@ -19,9 +19,8 @@ class MenuItem
         self.restaurant.owner
     end
 
-    # menu_items.map{|m_items| m_items.price}.max
 
     def self.most_expensive 
-        self.all.find{|mi| mi.price}.max
+        self.all.max_by{|mi| mi.price}
     end
 end

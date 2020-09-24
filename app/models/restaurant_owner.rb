@@ -26,8 +26,11 @@ class RestaurantOwner
         self.all.reduce(0){|sum, owners| sum + (owners.age / @@all.count)}
     end
 
-    def self.sell_retaurant(restaurant, buyer)
-        
-    end
+    # def sell_restaurant(restaurant, buyer)
+    #     self.restaurants do |o_restaurant|
+    #         if o_restaurant.owner == self
+    #             o_restaurant.owner
+
+    # end
 
 end

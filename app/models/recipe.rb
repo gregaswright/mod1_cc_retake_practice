@@ -36,7 +36,8 @@ class Recipe
     end
 
     def self.inactive
-        
+        self.all.map{|recipe| recipe.menu_items}
+        # returns an array of `Recipe` instances that are not currently being sold at any restaurants.
     end
 
 end

@@ -27,8 +27,8 @@ mi3 = MenuItem.new(teds, steak, 13)
 mi4 = MenuItem.new(kens, fish, 14)
 mi5 = MenuItem.new(bills, fish, 25)
 mi6 = MenuItem.new(jons, steak, 17)
-mi7 = MenuItem.new(teds, cake, 22)
-mi8 = MenuItem.new(kens, cheese, 28)
+mi7 = MenuItem.new(teds, nil, 28)
+mi8 = MenuItem.new(kens, cheese, 22)
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry

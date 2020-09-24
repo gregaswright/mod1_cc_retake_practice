@@ -28,8 +28,7 @@ class Restaurant
     end
 
     def self.highest_rated
-        self.all.max{|restaurant| restaurant.star_rating}
-       # I think my biggest weakpoint is understanding how class methods work.
+        self.all.max_by{|restaurant| restaurant.star_rating}
     end
 
 end
