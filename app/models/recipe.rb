@@ -17,6 +17,7 @@ class Recipe
 
     def menu_items
         MenuItem.all.select{|m_items| m_items.recipe == self}
+        #returns an array of all the `MenuItem` instances for the `Recipe`.
     end
 
     def restaurants
@@ -36,8 +37,31 @@ class Recipe
     end
 
     def self.inactive
-        self.all.map{|recipe| recipe.menu_items}
-        # returns an array of `Recipe` instances that are not currently being sold at any restaurants.
+        #self.all.select{|recipe| recipe.menu_items}
+        # menu_items = MenuItem.all.select {|menu_item| menu_item.recipe }
+        
+        # menu_items.map {|menu_item| menu_item.recipe}
+        
+        # returns an array of `Recipe` instances that are not 
+        # currently being sold at any restaurants.
+
+        # MenuItem.all.select{|menu_item| !menu_item.recipe == self} 
+        # active_menu_items.select {|menu_item| menu_item.recipe == self}
+
+        abc = MenuItem.all.map {|menu_item| menu_item.recipe}
+        Recipe.all.select{|e| !abc.include?(e)}
+    
     end
 
 end
+
+# my_zip = [1,2,3,4,5,6]
+# [2,3,5].all?{|z| my_zip.include?(z)}
+# => true 
+# [20,3,5].all?{|z| my_zip.include?(z)}
+# => false
+
+
+# a = [1,2,3,4]
+# b = [1,2,4]
+# a.select { |elem| !b.include?(elem) }

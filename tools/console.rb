@@ -10,6 +10,7 @@ cheese = Recipe.new("Grilled Cheese", "Chefs Special Grilled Cheese")
 cake = Recipe.new("Cake", "Red V Cake")
 steak = Recipe.new("Steak", "Steak and Potatos")
 fish = Recipe.new("Fish", "Fish of the Day")
+pork = Recipe.new("Pork", "Pork Chop")
 
 jeff = RestaurantOwner.new("Jeff", 32)
 fred = RestaurantOwner.new("Fred", 36)
@@ -25,10 +26,10 @@ mi1 = MenuItem.new(bills, cheese, 15)
 mi2 = MenuItem.new(jons, cake, 10)
 mi3 = MenuItem.new(teds, steak, 13)
 mi4 = MenuItem.new(kens, fish, 14)
-mi5 = MenuItem.new(bills, fish, 25)
+mi5 = MenuItem.new(nil, fish, 25)
 mi6 = MenuItem.new(jons, steak, 17)
-mi7 = MenuItem.new(teds, nil, 28)
-mi8 = MenuItem.new(kens, cheese, 22)
+mi7 = MenuItem.new(teds, steak, 28)
+mi8 = MenuItem.new(nil, cheese, 22)
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry

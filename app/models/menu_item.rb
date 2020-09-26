@@ -19,7 +19,6 @@ class MenuItem
         self.restaurant.owner
     end
 
-
     def self.most_expensive 
         self.all.max_by{|mi| mi.price}
     end
